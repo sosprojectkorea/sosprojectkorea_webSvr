@@ -39,7 +39,7 @@ public class HomeController {
 
 		return "home";
 	}
-
+	//123
 	@RequestMapping(value = "/jsonData", method = RequestMethod.GET)
 	public String jsonData(Locale jsonData, Model model) {
 		JSONObject obj = new JSONObject();
