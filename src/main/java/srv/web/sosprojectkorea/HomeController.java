@@ -6,8 +6,6 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -38,34 +36,5 @@ public class HomeController {
 		model.addAttribute("serverTime", formattedDate);
 
 		return "index";
-	}
-	//123
-	@RequestMapping(value = "/jsonData", method = RequestMethod.GET)
-	public String jsonData(Locale jsonData, Model model) {
-		JSONObject obj = new JSONObject();
-		obj.put("name", "mkyong.com");
-		obj.put("age", new Integer(100));
-		// 123
-		JSONArray list = new JSONArray();
-		list.add("msg 1");
-		list.add("msg 2");
-		list.add("msg 3");
-
-		obj.put("messages", list);
-
-		try {
-
-			FileWriter file = new FileWriter("c:\\test.json");
-			file.write(obj.toJSONString());
-			file.flush();
-			file.close();
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		System.out.print(obj);
-
-		return "jsonData";
 	}
 }
