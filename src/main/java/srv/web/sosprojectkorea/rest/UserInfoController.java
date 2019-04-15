@@ -22,12 +22,12 @@ public class UserInfoController {
 	@RequestMapping(value = "/userInfo2", method = RequestMethod.GET)
 	public UserInfoVo userInfo2() {
 
-		UserInfoVo sampleVo = new UserInfoVo(null, null, null, null);
-		sampleVo.setUser_id("user_id");
-		sampleVo.setPassword("password");
-		sampleVo.setEmail("email");
-		sampleVo.setId(1);
-		return sampleVo;
+		UserInfoVo userinfoVo = new UserInfoVo(null, null, null, null);
+		userinfoVo.setUser_id("user_id");
+		userinfoVo.setPassword("password");
+		userinfoVo.setEmail("email");
+		userinfoVo.setId(1);
+		return userinfoVo;
 	}
 
 	@RequestMapping(value = "/userInfo3", method = RequestMethod.GET)
